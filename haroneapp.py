@@ -94,7 +94,9 @@ else:
  
 
 # URL to your Python file (could be a GitHub raw link, etc.)
-python_file_url = "https://harone.github.io"
+github = "https://github.com/haronejaaved"
+myprojects = "https://haronejaaved.github.io"
 
 # HTML anchor tag with target="_blank" to open in a new tab
-st.markdown(f'<a href="{python_file_url}" target="_blank">Open Python Script</a>', unsafe_allow_html=True)
+st.markdown(f'<a href="{github}" target="_blank">Visit My Github Page</a>', unsafe_allow_html=True)
+st.markdown(f'<a href="{myprojects}" target="_blank">See some of my projects</a>', unsafe_allow_html=True)
