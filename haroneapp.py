@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+import webbrowser
+webbrowser.open("http://www.example.com")
 
 st.title("CSV/XLSX Data Visualizer")
 
@@ -84,6 +86,6 @@ if uploaded_file:
                 st.altair_chart(box, use_container_width=True)
 
 else:
-    st.info("Please upload a CSV or XLSX file to get started. Included a kaggle file from github")
+    st.info("Please upload a CSV or XLSX file to get started. Included a kaggle file from my github Repository")
 
-    
+open("link.html", "w").write('<a href="http://www.example.com"> my github </a>')
