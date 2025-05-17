@@ -1,13 +1,12 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import webbrowser
-webbrowser.open("http://www.example.com")
+ 
 
-st.title("CSV/XLSX Data Visualizer")
+st.title("Harone CSV/XLSX Data Visualizer.")
 
 # File uploader accepts csv or xlsx
-uploaded_file = st.file_uploader("Upload a CSV or XLSX file", type=["csv", "xlsx"])
+uploaded_file = st.file_uploader("Upload a CSV or XLSX file to visualize data", type=["csv", "xlsx"])
 
 if uploaded_file:
     # Load data based on file type
@@ -87,16 +86,11 @@ if uploaded_file:
 
 else:
     st.info("Please upload a CSV or XLSX file to get started. Included a kaggle file from my github Repository")
-
  
 
-
  
-
-# URL to your Python file (could be a GitHub raw link, etc.)
 github = "https://github.com/haronejaaved"
 myprojects = "https://haronejaaved.github.io"
 
-# HTML anchor tag with target="_blank" to open in a new tab
 st.markdown(f'<a href="{github}" target="_blank">Visit My Github Page</a>', unsafe_allow_html=True)
 st.markdown(f'<a href="{myprojects}" target="_blank">See some of my projects</a>', unsafe_allow_html=True)
