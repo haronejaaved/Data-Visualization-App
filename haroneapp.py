@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
  
 
-st.title("Harone CSV/XLSX Data Visualizer.")
+st.title("Harone's CSV/XLSX Data Visualizer.")
 
 # File uploader accepts csv or xlsx
 uploaded_file = st.file_uploader("Upload a CSV or XLSX file to visualize data", type=["csv", "xlsx"])
@@ -85,12 +85,13 @@ if uploaded_file:
                 st.altair_chart(box, use_container_width=True)
 
 else:
-    st.info("Please upload a CSV or XLSX file to get started. Included a kaggle file from my github Repository")
+    st.info("Please upload a CSV or XLSX file to get started. Included a kaggle file from my github Repository. Click the link below")
  
 
- 
+csvfile =  "https://github.com/haronejaaved/Data-Visualization-App/blob/master/cereal.csv"
 github = "https://github.com/haronejaaved"
 myprojects = "https://haronejaaved.github.io"
 
+st.markdown(f'<a href="{csvfile}" target="_blank">Sample CSV file taken from Kaggle dataset</a>', unsafe_allow_html=True)
 st.markdown(f'<a href="{github}" target="_blank">Visit My Github Page</a>', unsafe_allow_html=True)
 st.markdown(f'<a href="{myprojects}" target="_blank">See some of my projects</a>', unsafe_allow_html=True)
