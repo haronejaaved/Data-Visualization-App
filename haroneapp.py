@@ -1,14 +1,8 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import kagglehub
 
-# Download latest version
-path = kagglehub.dataset_download("semakulapaul/cereals-dataset")
 
-print("Path to dataset files:", path)
-
-st.title("Harone's CSV/XLSX Data Visualizer.")
 
 # File uploader accepts csv or xlsx
 uploaded_file = st.file_uploader("Upload a CSV or XLSX file to visualize data", type=["csv", "xlsx"])
@@ -98,8 +92,8 @@ github = "https://github.com/haronejaaved"
 myprojects = "https://haronejaaved.github.io"
 csvfile = "https://codewithharone.com/wp-content/uploads/2025/05/cereal.csv.zip"
 
-st.markdown(f'<a href="{csvfile}" target="_blank">Csv file from Kaggle dataset</a>', unsafe_allow_html=True)
+
 st.markdown(f'<a href="{github}" target="_blank">Visit My Github Page</a>', unsafe_allow_html=True)
 st.markdown(f'<a href="{myprojects}" target="_blank">See some of my projects</a>', unsafe_allow_html=True)
-
+st.markdown(f'<a href="{csvfile}" target="_blank">Csv file from Kaggle dataset</a>', unsafe_allow_html=True)
 
