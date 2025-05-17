@@ -88,4 +88,13 @@ if uploaded_file:
 else:
     st.info("Please upload a CSV or XLSX file to get started. Included a kaggle file from my github Repository")
 
-open("link.html", "w").write('<a href="http://www.example.com"> my github </a>')
+ 
+
+
+ 
+
+# URL to your Python file (could be a GitHub raw link, etc.)
+python_file_url = "https://harone.github.io"
+
+# HTML anchor tag with target="_blank" to open in a new tab
+st.markdown(f'<a href="{python_file_url}" target="_blank">Open Python Script</a>', unsafe_allow_html=True)
