@@ -1,17 +1,12 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-from flask import Flask, render_template
+import kagglehub
 
-app = Flask(__name__)
+# Download latest version
+path = kagglehub.dataset_download("semakulapaul/cereals-dataset")
 
-@app.route('/')
-def index():
-    return render_template('index.html')  # renders the HTML with download link
-
-if __name__ == '__main__':
-    app.run(debug=True)
- 
+print("Path to dataset files:", path)
 
 st.title("Harone's CSV/XLSX Data Visualizer.")
 
@@ -106,6 +101,3 @@ myprojects = "https://haronejaaved.github.io"
 st.markdown(f'<a href="{github}" target="_blank">Visit My Github Page</a>', unsafe_allow_html=True)
 st.markdown(f'<a href="{myprojects}" target="_blank">See some of my projects</a>', unsafe_allow_html=True)
 
-
-
-  
